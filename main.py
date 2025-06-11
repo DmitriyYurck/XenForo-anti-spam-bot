@@ -73,7 +73,7 @@ def moderate_threads():
         print(threads[0])
         if not threads:
             log("Нет доступных тем для проверки.")
-            time.sleep(1)  # Задержка перед следующей проверкой
+            time.sleep(100)  # Задержка перед следующей проверкой
             continue 
         
         for thread in threads:
@@ -87,7 +87,7 @@ def moderate_threads():
                 if delete_thread(thread_id):
                     send_alert(thread, banned_word)
         
-        time.sleep(1)  # Задержка перед следующей проверкой
+        time.sleep(100)  # Задержка перед следующей проверкой
 
 if __name__ == "__main__":
     try:
